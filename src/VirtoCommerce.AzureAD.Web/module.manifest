@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <id>VirtoCommerce.AzureAD</id>
+    <version>3.200.0</version>
+    <version-tag></version-tag>
+
+    <platformVersion>3.276.0</platformVersion>
+    <dependencies>
+        <!--<dependency id="VirtoCommerce.Core" version="3.200.4" />-->
+    </dependencies>
+
+    <title>VirtoCommerce AzureAD module</title>
+    <description>VirtoCommerce AzureAD module</description>
+
+    <authors>
+        <author>Konstantin Savosteev</author>
+    </authors>
+    <owners>
+        <owner>VirtoCommerce</owner>
+    </owners>
+
+    <projectUrl>https://github.com/VirtoCommerce/vc-module-azure-ad</projectUrl>
+    <iconUrl>Modules/$(VirtoCommerce.AzureAD)/Content/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <assemblyFile>VirtoCommerce.AzureAD.Web.dll</assemblyFile>
+    <moduleType>VirtoCommerce.AzureAD.Web.Module, VirtoCommerce.AzureAD.Web</moduleType>
+
+    <releaseNotes>First version.</releaseNotes>
+    <copyright>Copyright © 2023 VirtoCommerce. All rights reserved</copyright>
+    <tags>extension module</tags>
+    <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+</module>
