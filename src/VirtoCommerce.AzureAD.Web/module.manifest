@@ -30,4 +30,8 @@
     <copyright>Copyright © 2023 VirtoCommerce. All rights reserved</copyright>
     <tags>extension module</tags>
     <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+    
+    <groups>
+        <group>commerce</group>
+    </groups>
 </module>
