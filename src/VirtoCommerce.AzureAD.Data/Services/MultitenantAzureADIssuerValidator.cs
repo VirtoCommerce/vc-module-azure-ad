@@ -28,7 +28,9 @@ public static class MultitenantAzureADIssuerValidator
                 .Where(i => !string.IsNullOrEmpty(i));
 
             if (validIssuers.Any(i => i.Replace("{tenantid}", tokenTenantId) == issuer))
+            {
                 return issuer;
+            }
         }
 
         // Recreate the exception that is thrown by default
@@ -42,9 +44,14 @@ public static class MultitenantAzureADIssuerValidator
     private static string GetValidIssuersString(TokenValidationParameters parameters)
     {
         if (parameters.ValidIssuers == null)
+        {
             return "null";
+        }
+
         if (!parameters.ValidIssuers.Any())
+        {
             return "empty";
+        }
 
         return string.Join(", ", parameters.ValidIssuers);
     }
