@@ -6,7 +6,7 @@ VirtoCommerce.AzureAD module adds option to access Virto platform using Azure Ac
 
 ## Documentation
 
-* [Module documentation](/docs/index.md)
+* [Module documentation](docs/index.md)
 
 ## License
 

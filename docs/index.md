@@ -40,7 +40,7 @@ To set up the Azure Active Directory based authentication in Virto Commerce Plat
 3. Select **App registrations**.
 4. Click the **New registration** button on the **App registrations** screen:
 
-	![Azure portal, New App Registration button](../media/azure-sso01-aad-app-registration.png)
+	![Azure portal, New App Registration button](media/azure-sso01-aad-app-registration.png)
 
 5. Provide the following information on the **Register an application** screen:
 
@@ -48,19 +48,19 @@ To set up the Azure Active Directory based authentication in Virto Commerce Plat
 	- **Supported account types**: Leave the default value.
 	- **Redirect URI**: Select **Web** in the first dropdown and enter the external sign-in URL of your Virto Commerce Platform (*<Platform URL>/signin-oidc*), e.g., *http://localhost:10645/signin-oidc*.
   
-	![Azure portal, new app registration details](../media/azure-sso02-aad-app-registration2.png)
+	![Azure portal, new app registration details](media/azure-sso02-aad-app-registration2.png)
 	
     > Important: If your URL is not localhost, then **https** is required.
 
 6. Once you have filled these fields and registered your application, you will see its details:
 
-	![Azure portal, app registration details](../media/azure-sso03-aad-app-registration-overview.png)
+	![Azure portal, app registration details](media/azure-sso03-aad-app-registration-overview.png)
 
 	Copy the values from the **Application (client) ID** and **Directory (tenant) ID** fields, as you will need them in the next step.
 
 6. In **Authentication**, check **ID tokens** and hit **Save**:
 
-	![Azure portal, app registration Authentication](../media/azure-sso04-aad-app-registration-auth.png)
+	![Azure portal, app registration Authentication](media/azure-sso04-aad-app-registration-auth.png)
 
 ### Configuring Virto Commerce Platform to Use Azure AD Authentication
 1. Open **appsettings.json** for the Virto Commerce Platform instance.
@@ -105,25 +105,25 @@ To set up the Azure Active Directory based authentication in Virto Commerce Plat
 
 1. Navigate to the login page of your Virto Commerce Platform Manager and locate the **Sign in with Azure Active Directory** link:
 
-	![Virto Commerce Platform Manager login page with SSO](../media/azure-sso05-vc-platform-login.png)
+	![Virto Commerce Platform Manager login page with SSO](media/azure-sso05-vc-platform-login.png)
 	
 2. Once you click that link, you will be redirected to the Microsoft sign in page. You might be asked to sign in with your Microsoft account if you did not sign in with it earlier:
 
-	![Azure Active Directory sign-in page](../media/azure-sso06-ad-signin-page.png)
+	![Azure Active Directory sign-in page](media/azure-sso06-ad-signin-page.png)
     
 	Provide the credentials of your Azure account. Make sure this account belongs to the same domain where you registered the application.
 
 4. When signing in for the first time, you will also be asked to grant your application a permission to sign you in and read your account information. Just accept it:
 
-	![Azure Active Directory requesting user to grant sign-in permission](../media/azure-sso07-ad-signin-permissions.png)
+	![Azure Active Directory requesting user to grant sign-in permission](media/azure-sso07-ad-signin-permissions.png)
 	
 5. If everything went fine, you will be redirected back to the Virto Commerce Platform, where you will be already signed in:
 
-	![Virto Commerce Platform Manager, after successful sign-in](../media/azure-sso08-vc-platform-signedin.png)
+	![Virto Commerce Platform Manager, after successful sign-in](media/azure-sso08-vc-platform-signedin.png)
 
 	Please note that the account created by signing in using Azure Active Directory is just a regular Virto Commerce Platform account. By default, it has no roles and almost no permissions. You will have to ask your Virto Commerce Platform administrator to adjust permissions and roles for this account:
 	
-	![Virto Commerce Platform Manager, details of the user signed in with Azure AD](../media/azure-sso09-vc-platform-user-details.png)
+	![Virto Commerce Platform Manager, details of the user signed in with Azure AD](media/azure-sso09-vc-platform-user-details.png)
 
 ## Multitenant Azure AD
 If you use the Azure AD authentication and want to allow users from any tenant to connect to your Virto Commerce application,
@@ -160,7 +160,7 @@ The updated configuration can look like this:
 
 By default, the username/password login is enabled and shown first on the login page:
 
-  ![Sign-in pages](../media/azure-sso10-vc-platform-login.gif)
+  ![Sign-in pages](media/azure-sso10-vc-platform-login.gif)
 
 You can change the order of login popups or disable the password login completely. To disable the username/password login, add the following configuration options:
     
