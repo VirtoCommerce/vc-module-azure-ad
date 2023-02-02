@@ -1,37 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<module>
-    <id>VirtoCommerce.AzureAD</id>
-    <version>3.200.0</version>
-    <version-tag></version-tag>
-
-    <platformVersion>3.278.0</platformVersion>
-    <dependencies>
-        <!--<dependency id="VirtoCommerce.Core" version="3.200.4" />-->
-    </dependencies>
-
-    <title>VirtoCommerce AzureAD module</title>
-    <description>VirtoCommerce AzureAD module</description>
-
-    <authors>
-        <author>Konstantin Savosteev</author>
-    </authors>
-    <owners>
-        <owner>VirtoCommerce</owner>
-    </owners>
-
-    <projectUrl>https://github.com/VirtoCommerce/vc-module-azure-ad</projectUrl>
-    <iconUrl>Modules/$(VirtoCommerce.AzureAD)/Content/logo.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-
-    <assemblyFile>VirtoCommerce.AzureAD.Web.dll</assemblyFile>
-    <moduleType>VirtoCommerce.AzureAD.Web.Module, VirtoCommerce.AzureAD.Web</moduleType>
-
-    <releaseNotes>First version.</releaseNotes>
-    <copyright>Copyright © 2023 VirtoCommerce. All rights reserved</copyright>
-    <tags>extension module</tags>
-    <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
-    
-    <groups>
-        <group>commerce</group>
-    </groups>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id>VirtoCommerce.AzureAD</id>
+  <version>3.201.0</version>
+  <version-tag />
+  <platformVersion>3.278.0</platformVersion>
+  <title>VirtoCommerce AzureAD module</title>
+  <description>VirtoCommerce AzureAD module</description>
+  <authors>
+    <author>Konstantin Savosteev</author>
+  </authors>
+  <owners>
+    <owner>VirtoCommerce</owner>
+  </owners>
+  <projectUrl>https://github.com/VirtoCommerce/vc-module-azure-ad</projectUrl>
+  <iconUrl>Modules/$(VirtoCommerce.AzureAD)/Content/logo.png</iconUrl>
+  <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  <releaseNotes>First version.</releaseNotes>
+  <copyright>Copyright © 2023 VirtoCommerce. All rights reserved</copyright>
+  <tags>extension module</tags>
+  <assemblyFile>VirtoCommerce.AzureAD.Web.dll</assemblyFile>
+  <moduleType>VirtoCommerce.AzureAD.Web.Module, VirtoCommerce.AzureAD.Web</moduleType>
+  <dependencies />
+  <groups>
+    <group>commerce</group>
+  </groups>
+  <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
 </module>
