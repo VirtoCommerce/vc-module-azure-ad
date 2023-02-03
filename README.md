@@ -15,11 +15,9 @@ This helps to improve productivity, security, and user satisfaction by reducing 
 * Azure AD SSO for Virto Commerce Platform.
 * Singletenant and Multitenant support.
  
-
 ## Documentation
 * [Module Documentation](https://virtocommerce.com/docs/latest/modules/azure-ad/)
 * [View on GitHub](docs/index.md)
-
 
 ## References
 
