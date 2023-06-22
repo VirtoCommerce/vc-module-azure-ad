@@ -43,7 +43,7 @@ public class AzureADOptions
     /// <summary>
     /// Default user roles for users created by Azure AD accounts.
     /// </summary>
-    public string[] DefaultUserRole { get; set; }
+    public string[] DefaultUserRoles { get; set; }
 
     //
     // Summary:

@@ -51,6 +51,6 @@ public class AzureADExternalSignInProvider : IExternalSignInProvider
 
     public string[] GetUserRoles()
     {
-        return _azureAdOptions.DefaultUserRole;
+        return _azureAdOptions.DefaultUserRoles;
     }
 }
