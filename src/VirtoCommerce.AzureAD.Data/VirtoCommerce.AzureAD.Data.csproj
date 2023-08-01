@@ -20,8 +20,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.314.0-alpha.12681-pt-12488-role" />
-    <PackageReference Include="VirtoCommerce.Platform.Security" Version="3.314.0-alpha.12681-pt-12488-role" />
+    <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.293.14" />
+    <PackageReference Include="VirtoCommerce.Platform.Security" Version="3.293.14" />
   </ItemGroup>
 
 </Project>
