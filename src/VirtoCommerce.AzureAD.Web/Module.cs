@@ -72,6 +72,7 @@ public class Module : IModule, IHasConfiguration
                 {
                     AuthenticationType = "AzureAD",
                     Provider = provider.GetService<AzureADExternalSignInProvider>(),
+                    LogoUrl = "Modules/$(VirtoCommerce.AzureAD)/Content/provider-logo.webp"
                 });
             }
         }

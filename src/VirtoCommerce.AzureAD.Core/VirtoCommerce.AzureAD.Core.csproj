@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="VirtoCommerce.Platform.Core" Version="3.315.0" />
+    <PackageReference Include="VirtoCommerce.Platform.Core" Version="3.419.0-alpha.12747-pt-13784" />
   </ItemGroup>
 
 </Project>
