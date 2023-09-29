@@ -3,7 +3,7 @@
   <id>VirtoCommerce.AzureAD</id>
   <version>3.205.0</version>
   <version-tag />
-  <platformVersion>3.419.0-alpha.12748-pt-13784</platformVersion>
+  <platformVersion>3.419.0</platformVersion>
   <title>Azure Active Directory Single Sign-On</title>
   <description>Azure AD SSO integrates with Azure AD to provide secure authentication and authorization for cloud and on-premises applications.</description>
   <authors>
