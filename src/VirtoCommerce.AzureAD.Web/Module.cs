@@ -62,7 +62,10 @@ public class Module : IModule, IHasConfiguration
                         var serviceDescriptor = serviceCollection.FirstOrDefault(descriptor => descriptor.ServiceType == typeof(JwtSecurityTokenHandler));
                         if (serviceDescriptor?.ImplementationInstance is JwtSecurityTokenHandler defaultTokenHandler)
                         {
-                            openIdConnectOptions.TokenHandler = defaultTokenHandler;
+                            openIdConnectOptions.UseSecurityTokenValidator = true;
+#pragma warning disable CS0618 // Type or member is obsolete
+                            openIdConnectOptions.SecurityTokenValidator = defaultTokenHandler;
+#pragma warning restore CS0618 // Type or member is obsolete
                         }
                     });
 
