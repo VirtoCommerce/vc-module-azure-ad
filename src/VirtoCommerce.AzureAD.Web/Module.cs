@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using VirtoCommerce.AzureAD.Core.Models;
 using VirtoCommerce.AzureAD.Data.Services;
 using VirtoCommerce.Platform.Core.Modularity;
+using VirtoCommerce.Platform.Core.Security.ExternalSignIn;
 using VirtoCommerce.Platform.Security.ExternalSignIn;
 
 namespace VirtoCommerce.AzureAD.Web;
@@ -66,6 +68,16 @@ public class Module : IModule, IHasConfiguration
 #pragma warning disable CS0618 // Type or member is obsolete
                             openIdConnectOptions.SecurityTokenValidator = defaultTokenHandler;
 #pragma warning restore CS0618 // Type or member is obsolete
+
+                            openIdConnectOptions.Events.OnRedirectToIdentityProvider = context =>
+                            {
+                                var oidcUrl = context.Properties.GetOidcUrl();
+                                if (!string.IsNullOrEmpty(oidcUrl))
+                                {
+                                    context.ProtocolMessage.RedirectUri = oidcUrl;
+                                }
+                                return Task.CompletedTask;
+                            };
                         }
                     });
 

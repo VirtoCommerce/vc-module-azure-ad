@@ -8,9 +8,6 @@
     <SonarQubeTestProject>false</SonarQubeTestProject>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.0" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\VirtoCommerce.AzureAD.Core\VirtoCommerce.AzureAD.Core.csproj" />
     <ProjectReference Include="..\VirtoCommerce.AzureAD.Data\VirtoCommerce.AzureAD.Data.csproj" />
   </ItemGroup>
