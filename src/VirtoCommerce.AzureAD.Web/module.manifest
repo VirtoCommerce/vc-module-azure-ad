@@ -4,7 +4,7 @@
   <version>3.801.0</version>
   <version-tag />
 
-  <platformVersion>3.845.0-alpha.12954-vcst-1431</platformVersion>
+  <platformVersion>3.848.0</platformVersion>
   <dependencies />
 
   <title>Azure Active Directory Single Sign-On</title>
