@@ -10,12 +10,12 @@ public class AzureADOptions
     /// <summary>
     /// Sets AuthenticationType value for Azure AD authentication provider.
     /// </summary>
-    public string AuthenticationType { get; set; }
+    public string AuthenticationType { get; set; } = "AzureAD";
 
     /// <summary>
     /// Sets human-readable caption for Azure AD authentication provider. It is visible on sign-in page.
     /// </summary>
-    public string AuthenticationCaption { get; set; }
+    public string AuthenticationCaption { get; set; } = "Azure Active Directory";
 
     /// <summary>
     /// Application ID of the VirtoCommerce platform application registered in Azure Active Directory. It can be found 
@@ -33,12 +33,17 @@ public class AzureADOptions
     /// <summary>
     /// URL of the Azure AD endpoint used for authentication (usually https://login.microsoftonline.com/).
     /// </summary>
-    public string AzureAdInstance { get; set; }
+    public string AzureAdInstance { get; set; } = "https://login.microsoftonline.com/";
+
+    /// <summary>
+    /// The endpoint version suffix. Valid values are '', '/v1.1' and '/v2.0'.
+    /// </summary>
+    public string VersionSuffix { get; set; }
 
     /// <summary>
     /// Default user type for users created by Azure AD accounts.
     /// </summary>
-    public string DefaultUserType { get; set; }
+    public string DefaultUserType { get; set; } = "Manager";
 
     /// <summary>
     /// Default user roles for users created by Azure AD accounts.

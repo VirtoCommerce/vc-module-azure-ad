@@ -1,5 +1,7 @@
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 
 namespace VirtoCommerce.AzureAD.Data.Services;
@@ -12,6 +14,7 @@ namespace VirtoCommerce.AzureAD.Data.Services;
 /// token won’t match the issuer specified in the OpenID metadata. 
 /// https://thomaslevesque.com/2018/12/24/multitenant-azure-ad-issuer-validation-in-asp-net-core/
 /// </summary>
+[Obsolete("Use Microsoft.IdentityModel.Validators.AadIssuerValidator", DiagnosticId = "VC0009", UrlFormat = "https://docs.virtocommerce.org/products/products-virto3-versions")]
 public static class MultitenantAzureADIssuerValidator
 {
     public static string ValidateIssuerWithPlaceholder(string issuer, SecurityToken token, TokenValidationParameters parameters)
@@ -19,9 +22,9 @@ public static class MultitenantAzureADIssuerValidator
         // Accepts any issuer of the form "https://login.microsoftonline.com/{tenantid}/v2.0",
         // where tenantid is the tid from the token.
 
-        if (token is JwtSecurityToken jwt &&
-            jwt.Payload.TryGetValue("tid", out var value) &&
-            value is string tokenTenantId)
+        var tokenTenantId = GetTenantId(token);
+
+        if (!string.IsNullOrEmpty(tokenTenantId))
         {
             var validIssuers = (parameters.ValidIssuers ?? Enumerable.Empty<string>())
                 .Append(parameters.ValidIssuer)
@@ -38,6 +41,16 @@ public static class MultitenantAzureADIssuerValidator
         throw new SecurityTokenInvalidIssuerException($"IDX10205: Issuer validation failed. Issuer: '{issuer}'. Did not match: validationParameters.ValidIssuer: '{parameters.ValidIssuer ?? "null"}' or validationParameters.ValidIssuers: '{GetValidIssuersString(parameters)}'.")
         {
             InvalidIssuer = issuer
+        };
+    }
+
+    private static string GetTenantId(SecurityToken token)
+    {
+        return token switch
+        {
+            JwtSecurityToken jwtSecurityToken => jwtSecurityToken.Payload.TryGetValue("tid", out var value) ? value as string : null,
+            JsonWebToken jsonWebToken => jsonWebToken.TryGetClaim("tid", out var claim) ? claim.Value : null,
+            _ => null
         };
     }
 
