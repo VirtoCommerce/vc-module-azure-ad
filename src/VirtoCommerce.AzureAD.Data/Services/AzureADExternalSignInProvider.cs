@@ -26,6 +26,11 @@ public class AzureADExternalSignInProvider : IExternalSignInProvider
     {
         var userName = externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Upn);
 
+        if (string.IsNullOrWhiteSpace(userName))
+        {
+            userName = externalLoginInfo.Principal.FindFirstValue("upn");
+        }
+
         if (string.IsNullOrWhiteSpace(userName) && _azureAdOptions.UsePreferredUsername)
         {
             userName = externalLoginInfo.Principal.FindFirstValue("preferred_username");

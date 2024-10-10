@@ -36,6 +36,11 @@ public class AzureADOptions
     public string AzureAdInstance { get; set; }
 
     /// <summary>
+    /// The endpoint version suffix. Valid values are '', '/v1.1' and '/v2.0'.
+    /// </summary>
+    public string VersionSuffix { get; set; }
+
+    /// <summary>
     /// Default user type for users created by Azure AD accounts.
     /// </summary>
     public string DefaultUserType { get; set; }
