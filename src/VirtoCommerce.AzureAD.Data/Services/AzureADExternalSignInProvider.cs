@@ -51,7 +51,7 @@ public class AzureADExternalSignInProvider : IExternalSignInProvider
 
     public string GetUserType()
     {
-        return _azureAdOptions.DefaultUserType ?? "Manager";
+        return _azureAdOptions.DefaultUserType;
     }
 
     public string[] GetUserRoles()
