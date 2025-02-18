@@ -16,13 +16,13 @@ This helps to improve productivity, security, and user satisfaction by reducing 
 * Singletenant and Multitenant support.
  
 ## Documentation
-* [Module Documentation](https://virtocommerce.com/docs/latest/modules/azure-ad/)
+* [Module Documentation](https://docs.virtocommerce.org/platform/user-guide/azure-ad/overview/)
 * [View on GitHub](docs/index.md)
 
 ## References
 
-* Deploy: https://doc.virtocommerce.org/docs/latest/developer-guide/deploy-module-from-source-code/
-* Installation: https://doc.virtocommerce.org/docs/latest/user-guide/modules/
+* Deploy: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code/
+* Installation: https://docs.virtocommerce.org/platform/user-guide/modules-installation/
 * Home: https://virtocommerce.com
 * Community: https://www.virtocommerce.org
 * [Download Latest Release](https://github.com/VirtoCommerce/vc-module-azure-ad/releases/latest)
