@@ -4,7 +4,7 @@
   <version>3.805.0</version>
   <version-tag />
 
-  <platformVersion>3.856.0</platformVersion>
+  <platformVersion>3.917.0</platformVersion>
   <dependencies />
 
   <title>Azure Active Directory Single Sign-On</title>
@@ -19,7 +19,7 @@
   <iconUrl>Modules/$(VirtoCommerce.AzureAD)/Content/logo.png</iconUrl>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <releaseNotes>First version.</releaseNotes>
-  <copyright>Copyright © 2011-2024 Virto Commerce. All rights reserved</copyright>
+  <copyright>Copyright © 2011-2025 Virto Commerce. All rights reserved</copyright>
   <tags>extension module</tags>
   <assemblyFile>VirtoCommerce.AzureAD.Web.dll</assemblyFile>
   <moduleType>VirtoCommerce.AzureAD.Web.Module, VirtoCommerce.AzureAD.Web</moduleType>
